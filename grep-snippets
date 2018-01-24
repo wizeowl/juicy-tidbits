@@ -1,0 +1,29 @@
+# recursively
+grep -r "..." 
+
+#same as grep -r --include "*.js"
+find . -name "*.js" | xarg grep "..." 
+
+#only files tracked by git
+git grep 
+
+# shows the line numbers
+grep -n "..." *.js 
+
+# show the next 2 lines
+grep -A 2 "..." *.js 
+
+# the previous 2 lines
+grep -B 2 "..." *.js 
+
+# 2 lines around
+grep -C 2 ....  
+
+# the extend regex
+grep -E              
+
+# highlight
+grep --color 
+
+# exclude         
+grep -v "..."
