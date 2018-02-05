@@ -1,5 +1,5 @@
-Amidst the noise of the highway I missed a phone call from my girlfriend.
-I later found out and called back. I couldn't reach her.
+Amidst the highway noise, I missed a phone call from my girlfriend.
+I later found out and called her back. I couldn't reach her.
 We were on the phone 15 minues earlier, so I supposed the call I missed was to notify me she was going offline.
   _____   _                        __ _   _        _             
  |_   _| | |_      ___    _  _    / _` | | |_     | |_     ___   
@@ -8,34 +8,32 @@ We were on the phone 15 minues earlier, so I supposed the call I missed was to n
 _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
 "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
 
-This might seem mundane for many people, but somehow it got me thinking about the different options we had to establish that kind of consensus.
+This might seem mundane for many people, but it got me thinking about the different options we had to establish that kind of consensus.
 
 1 - She could inform me she's about to go offline, then notify me when she's reachable again.
 2 - She could do nothing. I might call, I would find her offline. Her network provider sends a notification when she goes back online(which
 is very important for the subsequent discussion).
 
-Approach 1 seemed to me at first akin to the routing protocol. But I dismissed that analogy for 2 reasons. First in the routing protocol, 
-it's actually the neighboring nodes that notify others of failures, after having actually done a call the failing node. Second, nodes in a network 
+Approach 1 seemed to me at first akin to the routing protocol. An analogy I dismissed for 2 reasons. In the routing protocol, 
+it's actually the neighboring nodes that notify other neighbors of failures, after having actually made a request to the failing node. Second, nodes in a network 
 almost never notify before going down. 
 
-The first approach rather struck me as similar to the wait/notify pattern in Java threads. 
-It has the downside of requiring a synchronous connection to allow her to pass me the message (which didn't happen here obviously).
+A much better analogy is the wait/notify pattern in Java threads. 
+It has the downside of requiring a synchronous connection to allow message delivery (which didn't happen here obviously).
 Moreover, the more people she would have to wait/notify, the less practical this method becomes.
 But most importanly, it's a considerate gesture from here, which of course trumps the whole discussion above.
 
 So we fell back to approach 2. She had told me she was going out with her younger sister and cousin. So I got worried a bit when she didn't answer.
-This is probably why the other approach was asked for in the first place.
+This is probably why the first solution was asked for in the first place.
 It has also the virtue of being the lazy approach, bacause after all, I might not have called until later in the evening. A famous philosophical 
-question says: if a node fails in a network and no request is made for it, did it really go down.
-The presence of network notifications is crucial, bacause rather than relying on a retry strategy like exponential backoff(most probably)
-we simply implement the publisher/subscriber pattern. Of course it requires a central authority to handle the publishing and subscriptions (wich is 
-an extra dependancy).
+question says: if a node fails in a network and no request is made for it, did it really go down?
+The presence of network notifications is crucial, bacause rather than relying on a retry strategy like exponential backoff
+we rely on the publisher/subscriber pattern. Of course it requires a central authority to handle the publishing and subscriptions.
 
 
 I consider these musings to have intrinsic value. They're part of the software engineer mindset after all.
-But I have a more subtle point. I called her again and she answered. It turned out to be a network failure after all.
-This demonstates the fallibility of human reasoning. I made a hypothisis and build a whole reasoning around it, imposing my interpretation
-on what turned out to be random events.
+But I have a more subtle point. I retried and she answered this time. It turned out to be a network failure after all.
+I made a hypothisis and build a whole reasoning around it, imposing order on what turned out to be random events.
 
 The second point is that the network is unreliable, you can't make any assumptions about it.
 
