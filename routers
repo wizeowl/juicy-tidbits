@@ -1,6 +1,6 @@
-Amidst the highway noise, I missed a phone call from my girlfriend.
-I later found out and called her back. I couldn't reach her.
-We were on the phone 15 minues earlier, so I supposed the call I missed was to notify me she was going offline.
+Amidst the highway noise, I missed a phone call.
+I later called my girlfriend back, but I couldn't reach her.
+We were on the phone 15 minues earlier, so I supposed she tried to notify me she was about to go offline.
   _____   _                        __ _   _        _             
  |_   _| | |_      ___    _  _    / _` | | |_     | |_     ___   
    | |   | ' \    / _ \  | +| |   \__, | | ' \    |  _|   (_-<   
@@ -8,33 +8,49 @@ We were on the phone 15 minues earlier, so I supposed the call I missed was to n
 _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
 "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
 
-This might seem mundane for many people, but it got me thinking about the different options we had to establish that kind of consensus.
 
-1 - She could inform me she's about to go offline, then notify me when she's reachable again.
-2 - She could do nothing. I might call, I would find her offline. Her network provider sends a notification when she goes back online(which
-is very important for the subsequent discussion).
+This might seem mundane for many people, but it got me thinking about the different options we had in our disposal in order to establish that kind of consensus. The two approaches I saw were:
 
-Approach 1 seemed to me at first akin to the routing protocol. An analogy I dismissed for 2 reasons. In the routing protocol, 
-it's actually the neighboring nodes that notify other neighbors of failures, after having actually made a request to the failing node. Second, nodes in a network 
-almost never notify before going down. 
+1 - Doing as she supposedly did: "I'm about to go offline, and I'll notify you when I'm reachable again."
+2 - Doing nothing. I might call, I would find her offline. Her network provider sends a notification when she goes back online(which obviously makes a difference).
 
-A much better analogy is the wait/notify pattern in Java threads. 
-It has the downside of requiring a synchronous connection to allow message delivery (which didn't happen here obviously).
-Moreover, the more people she would have to wait/notify, the less practical this method becomes.
-But most importanly, it's a considerate gesture from here, which of course trumps the whole discussion above.
+Let's give the two approaches names (not for the sake of naming per se, but because I found the first draft akin to Orwellien newspeak without easily regognizable labels).
+Let's call the first the "Push" or "Active", the second the "Pull" or "Lazy".
+This choice is by no means arbitrary as anyone with a reasonable knowledge of computer networks would recognize these two staple types of network protocols.
+"Push" protocols keep a live connection between servers and clients. Servers emit events to clients as soon as they occur. The downside here of course is the cost of maintaining an open connection.
+"Pull" protocols rely on the client to make calls to the server and get updated. The downside here is the latency with which events are received.
+As software engineers we learn no only to regognize these patterns but to make and back decisions in these matters in any non-trivial system we work on.
 
-So we fell back to approach 2. She had told me she was going out with her younger sister and cousin. So I got worried a bit when she didn't answer.
-This is probably why the first solution was asked for in the first place.
-It has also the virtue of being the lazy approach, bacause after all, I might not have called until later in the evening. A famous philosophical 
-question says: if a node fails in a network and no request is made for it, did it really go down?
-The presence of network notifications is crucial, bacause rather than relying on a retry strategy like exponential backoff
-we rely on the publisher/subscriber pattern. Of course it requires a central authority to handle the publishing and subscriptions.
+The "Push" approach reminded me at first of the distance vector routing protocol. It's the main protocol allowing computers to find each other efficiently in the internet.
+Routers keep the routes they know and the distance it takes to reach them in tables in their memories. Each router communicates this infomation to its neighbors periodically and updates its own
+infos occordingly. But there are substantial difference between this routing protocol and the approach 1. First, computers which go down in the internet never notify before going down. Second routers don't even get notifications of failure from other nodes but assume the absence of periodical notifications is caused by failure of the given computer.
+
+We can find a much better analogy is the wait/notify pattern in Java threads. For the sake of simplifying, a thread is used to execute programs in parallel. But programs, just like humans, sometimes contest the use of shared resources. So sometimes we have to make a program wait until it gets notified that a condition is met or a certain resource is free.
+In out lifes, we need to assure message delivery (which didn't happen here obviously). Moreover, the more people she would have to wait/notify, the less practical this method becomes.
+But to be fair, I found the gesture very considerate, and this of course trumps all the downsides.
 
 
-I consider these musings to have intrinsic value. They're part of the software engineer mindset after all.
-But I have a more subtle point. I retried and she answered this time. It turned out to be a network failure after all.
-I made a hypothisis and build a whole reasoning around it, imposing order on what turned out to be random events.
+The pull approach has the virtue of being lazy, bacause after all, I might not have called until later in the evening. A famous philosophical question says: "If a node fails in a network and no request is made for it, did it really go down?"
+
+Notifications from the network are crucial. Without them we would need a call retry strategy. A famous strategy is exponential backoff, when we wait longer and longer after each attempt.
+With notifications the we become in a publisher/subscriber kind of situation. The publisher/subscriber is so prevalent in software systems. Essentially you tell a central authority that you're interested in a certain type of events, and that authority(the network provider in our case) notifies you whenever such an event occurs. Of course we rely on the central authority providing such service.
+
+
+I consider these musings to have intrinsic value. They're part of the software engineer mindset after all. But I have a more subtle point.
+Earlier my girlfriend had told me she was going out with her younger sister and cousin. I got worried a little when she didn't answer. I retried and she answered this time. It turned out to be a network failure after all.
+
+So the first point is: I made a hypothisis and build a whole reasoning around it, imposing order on what turned out to be random events. Maybe 
 
 The second point is that the network is unreliable, you can't make any assumptions about it.
 
 The third point is... I can't remember why she called me.
+
+
+
+
+
+
+
+
+
+
