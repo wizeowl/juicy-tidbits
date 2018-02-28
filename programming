@@ -12,16 +12,9 @@ This constitutes a barrier which distracts from the main purpose, be it learning
 He argued that, let's say 30 years ago, a computer came bundled with a development environement and you didn't have to be hassled by installation and configurations.
 
 My article is intended to discuss two points.
-First, Is it a good or a bad thing that programming is getting harder?
-Second is it really so?
+First, is it true that programming is getting harder today?
+Scond, Could it be a good thing?
 
-It may be true that learning how ot program is becoming harder today.
-As a experimented programmer, it might need real sympathy to recognize that learning our trade today is more tricky than ever.
-It's hard for us to recognize it because we already can sift through the deluge of information innundating us from every side.
-We can distinguish the good from the bad, the relevant from the outdated.
-Programming languages are getting really numerous, each with its own communities, resources, articles, tutorials, videos, youtube videos, books, etc.
-Many of which need real expertise to know it's fluff
-Many buzz words
 I remember how I felt when I have first read this article.
 People like Brian Stroustrup are may be responsible for this
 He said it tongue in cheek, he saw a bunch of trends, 
@@ -55,16 +48,6 @@ It becomes a riteof passage, now you're a programmer.
 What happens when everything is easy? You get the wrong idea about and also you think you're a programmer withoutmaking the necessary effort
 We don't need spoiled programmers
 
-My final point is that you still don't have a conclusive idea about how prevalent the problem is
-
-the problem is that I have no way to tell how hard it is to get starting to program
-I'm already an experienced programmer, I lost my virginity
-(though I have the intention to teach somebody to program but that's another story)
-
-You no longer have the fresh eyes to tell if it's hard or easy, it's impossible to unlearn how to read, that's why the stroop test is such a sone of a bitch
-the only way to know it is to see how many people read the article, hçow many tried to implement, how many found it hard, easy then make conclusion
-you need some statistics, some objective assessment of how hard running the code really was
-don't forget about windows, real men use linux
 
 finally it's maybe not need to install python to understand the ideas
 even experienced programmers find it hard to find the strenth and will power to download and get their env right at the end of a long day
