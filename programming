@@ -5,18 +5,15 @@ Cialdini: Consistency
 Zappos: Hiring
 Leon Festinger: Cognitive Dissonance
 
-Yesterday, I have read Allen Downey's excellent article "Learning to program is getting harder"
-First one word about the blog title: "Probably Overthinking it" Cool name, Could have been mine's (refering to the blog's article could be my blog's, whao! (you just earned a whao point!))
-For those who didn't read the article, its main idea is that, let's say 30 years ago, your computer's main purpose was programming
-today if you need to start programming you have to setup editors, libraries, binaries first.
-this acts as a barrier to entry
+Yesterday, I have read Allen Downey's article "Learning to program is getting harder"
+(First, an aside about the blog title: "Probably Overthinking it". It could have been my blog's title :)
+The main idea of the article is that today if you need to start programming you have to setup editors, libraries, binaries, etc.
+This constitutes a barrier which distracts from the main purpose, be it learning subjects data analysis, signal processing, or programming itself.
+He argued that, let's say 30 years ago, a computer came bundled with a development environement and you didn't have to be hassled by installation and configurations.
 
-the aim of my article is first to discuss if it may be a good thing that programming is becoming a hard thing
-to ask the question: is really so
-
-the problem is that I have no way to tell how hard it is to get starting to program
-I'm already an experienced programmer, I lost my virginity
-(though I have the intention to teach somebody to program but that's another story)
+My article is intended to discuss two points.
+First, Is it a good or a bad thing that programming is getting harder?
+Second is it really so?
 
 It may be true that learning how ot program is becoming harder today.
 As a experimented programmer, it might need real sympathy to recognize that learning our trade today is more tricky than ever.
@@ -59,7 +56,11 @@ What happens when everything is easy? You get the wrong idea about and also you 
 We don't need spoiled programmers
 
 My final point is that you still don't have a conclusive idea about how prevalent the problem is
-Lost innocence
+
+the problem is that I have no way to tell how hard it is to get starting to program
+I'm already an experienced programmer, I lost my virginity
+(though I have the intention to teach somebody to program but that's another story)
+
 You no longer have the fresh eyes to tell if it's hard or easy, it's impossible to unlearn how to read, that's why the stroop test is such a sone of a bitch
 the only way to know it is to see how many people read the article, hçow many tried to implement, how many found it hard, easy then make conclusion
 you need some statistics, some objective assessment of how hard running the code really was
