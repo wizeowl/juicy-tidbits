@@ -1,0 +1,18 @@
+awk '{print $1 "  " $2}' filename
+awk -F "," '{print $3}' filename
+awk '{print $0}' FS="," filename
+awk 'NR!=1{print $1}' filename
+ps -ef > processes && awk '{print $8}' processes
+# how many chrome processes are active
+awk '$8=="/opt/google/chrome/chrome"{print $8}' processes | wc -l
+awk '$3==0 || $3==1{print $3}' processes | wc -l
+# UID == root && PID > 1000
+awk '$1=="root" && $2>1000{print $8}' processes
+# regex anywhere
+awk '/chrome/{print $8}' processes 
+awk '!/firefox/{print $8}' processes 
+# $8 contains chrome
+awk '$8~/chrome/{print $8}' processes
+# $8 doesn't contain chrome
+awk '$8!~/chrome/{print $8}' processes
+awk '{if($2 > 1000) print $8; else print $7;}' processes
