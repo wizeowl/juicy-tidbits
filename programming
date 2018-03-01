@@ -5,25 +5,7 @@ Cialdini: Consistency
 Zappos: Hiring
 Leon Festinger: Cognitive Dissonance
 
-Yesterday, I have read Allen Downey's article "Learning to program is getting harder"
-(First, an aside about the blog title: "Probably Overthinking it". It could have been my blog's title :)
-The main idea of the article is that today if you need to start programming you have to setup editors, libraries, binaries, etc.
-This constitutes a barrier which distracts from the main purpose, be it learning subjects data analysis, signal processing, or programming itself.
-He argued that, let's say 30 years ago, a computer came bundled with a development environement and you didn't have to be hassled by installation and configurations.
 
-My article is intended to discuss two points.
-First, is it true that programming is getting harder today?
-Scond, Could it be a good thing?
-
-I remember how I felt when I have first read this article.
-People like Brian Stroustrup are may be responsible for this
-He said it tongue in cheek, he saw a bunch of trends, 
-programmers were getting numerous, wages were dropping, programmmers were getting really good at programming
-skills were really protable
-what to do about it, use the Object oriented programming bandwagon and invent a disruptive (litterally) programming language
-market it as the end all and be all of programming
-create a new problem for which you're(kind of) providing the solution
-voila now you have scala, java, php, javascript, elixir, haskell, c++ .... good luck making your way through that
 
 Let's talk about cognitive dissonnance. Leon Festinger, at Stanford at the time, devised a bunch of experiments to establish the phenomenon of
 cognitive dissonance.
