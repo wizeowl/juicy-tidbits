@@ -1,0 +1,25 @@
+# display 2nd line
+sed '2p' fname
+# display only 2nd
+sed -n '2p' fname
+# display only last
+sed -n '$p' fname
+# display lines between 2 and 4
+sed -n '2,4p' fname
+# don't display lines between 2 and 4
+sed -n '2,4!p' fname
+# pattern matching
+sed '/regex/p' fname
+# pattern write to a file
+sed '/regex/w res.txt' fname
+# substitute 99 by 88
+sed 's/99/88/' fname
+# replace a by b and c by d
+sed -e 's/a/b/' -e 's/c/d/' fname
+# replace only when line matches james
+sed '/james/s/11/ii/' fname
+# delete matching
+sed '/james/d' fname
+# 5i : insert at line #5
+head awkf | sed -e '/james/d' -e '5i Helooooooo!'
+head awkf | sed '/james/d' | sed '5i Helooooooo!'
