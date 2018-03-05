@@ -1,9 +1,10 @@
+http://allendowney.blogspot.com/2018/02/learning-to-program-is-getting-harder.html
 Yesterday, I've read Allen Downey's article "Learning to program is getting harder"
-(First, an aside about the blog title: "Probably Overthinking it". It could have been my blog's title :)
-The main idea of the article is that today if you need to start programming you have to setup editors, libraries, binaries, etc.
-This constitutes a barrier which distracts from the main purpose, be it learning subjects data analysis, signal processing, or programming itself.
+The article mainly point that if you need to start programming today you have to first do things which have no intrinsic values like seting up editors, configuring libraries, binaries, etc.
+This constitutes a barrier which distracts from the main purpose, be it learning subjects such as data analysis, signal processing, or learning programming itself.
 He argued that, let's say 30 years ago, a computer came bundled with a development environement and you didn't have to be hassled by installation and configurations.
 He also remarked that beginners are finding it harder to run the examples he provided with his books.
+In the present article, I'm going to comment on further barriers newbies encounter during their entry to the field. Then I'm going to argue that though the complexity is accidental, it's in some respects beneficial.
 
 My first impression when reading Allan's article was scepticism. Based on a few complaints by people who couldn't run examples on their machines, one can't conclude that beginning to program is getting harder. You need more data about the people who tried, those who succeded, and those who didn't. Sloppiness must follow a normal distribution.
 I actually firmly believed that the opposite was true. Today You can google anything, right?
@@ -12,4 +13,5 @@ I smiled, because only one day earlier, I was lamenting how we're teaching child
 
 Today there are numerous programming languages, each with their own articles, tutorials, youtube videos, books, advocates, cults, buzzword, buzzwords, buzzwords, and shriek, frameworks! Of course we can google anything, but there are many things which happen when I (for example) look for information. It makes a difference how I write my questions, which google results look relevant, what to skip and what to read in a long forum thread, is the solution I'm looking at plausible and applicable, etc.
 
-Here's a brief digression, and, let's hope, a useful one. My favorite badass is Brian Stroustrup (He's the inventor of C++ by the way). When I've read this article I thought it was a joke. What he said was basically that programmers were getting numerous and more proficient that wages started to stagnate. So jumped on the OOP bandwagon and introduced a "revolutionary" object oriented programming language called C++. Let's give him credit for his noble intentions, but let's not overlook that the Internet, modern operating systems, and browsers came along, introducing new constraints and requirements. That's how languages like Java and Javascripts were born (we're sadly still stuck with Java)
+http://smorgasborg.artlung.com/Invention_of_Cplusplus.shtml
+My favorite badass is Brian Stroustrup (He's the inventor of C++ by the way). When I've read this interview I thought it was a joke. What he said was basically that programmers were getting numerous and more proficient that wages started to stagnate. So he jumped on the OOP bandwagon and introduced an inferior programming language called C++. Let's give him credit for his noble intentions, but let's not overlook that the Internet, modern operating systems, and browsers came along, introducing new constraints and requirements. That's how languages like Java and Javascripts were born (we're sadly still stuck with Java). Furthermore, it was no longer viable to assume the end user had any knowledge of programming or any intentions to do so.
